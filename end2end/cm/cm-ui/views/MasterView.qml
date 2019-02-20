@@ -2,6 +2,8 @@ import QtQuick 2.9
 import QtQuick.Window 2.2
 import QtQuick.Controls 2.2
 import assets 1.0
+import components 1.0
+
 Window {
     visible: true
     width: 640
@@ -16,77 +18,9 @@ Window {
         onGoEditClientView: contentFrame.replace("qrc:/views/EditClientView.qml", {selectedClient: client})
         onGoFindClientView: contentFrame.replace("qrc:/views/FindClientView.qml")
     }
-    Rectangle {
+    NavigationBar {
         id: navigationBar
-        anchors {
-            top: parent.top
-            bottom: parent.bottom
-            left: parent.left
-        }
-        width: 100
-        color: "#000000"
-
-        Column {
-            Row{
-            Text {
-                font {
-                    family: Style.fontAwesome
-                    pixelSize: 42
-                }
-                color: "#ffffff"
-                text: "\uf0c9"
-            }
-            }
-            Row{
-            Text {
-                font {
-                    family: Style.fontAwesome
-                    pixelSize: 42
-                }
-                color: "#ffffff"
-                text: "\uf015"
-            }
-            }
-            Row{
-            Text {
-                font {
-                    family: Style.fontAwesome
-                    pixelSize: 42
-                }
-                color: "#ffffff"
-                text: "\uf234"
-            }
-            }
-            Row{
-            Text {
-                font {
-                    family: Style.fontAwesome
-                    pixelSize: 42
-                }
-                color: "#ffffff"
-                text: "\uf002"
-            }
-            }
-        }
-
-        /*
-        Column {
-                    Button {
-                        text: "Dashboard"
-                        onClicked: masterController.ui_navigationController.goDashboardView()
-                    }
-                    Button {
-                        text: "New Client"
-                        onClicked: masterController.ui_navigationController.goCreateClientView()
-                    }
-                    Button {
-                        text: "Find Client"
-                        onClicked: masterController.ui_navigationController.goFindClientView()
-                    }
-        }
-        */
     }
-
     StackView{
         id:contentFrame
         anchors {
