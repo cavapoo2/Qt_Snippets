@@ -13,12 +13,16 @@ include(../qmake-destination-path.pri)
 INCLUDEPATH += source
 
 SOURCES += source/models/client.cpp \
-    source/controllers/master-controller.cpp
+    source/controllers/master-controller.cpp \
+    source/framework/command.cpp \
+    source/controllers/commandcontroller.cpp
 
 HEADERS += source/cm-lib_global.h \
     source/models/client.h \
     source/controllers/master-controller.h \
-    source/controllers/navigation-controller.h
+    source/controllers/navigation-controller.h \
+    source/framework/command.h \
+    source/controllers/commandcontroller.h
 
 message(cm-lib project dir: $${PWD})
 
