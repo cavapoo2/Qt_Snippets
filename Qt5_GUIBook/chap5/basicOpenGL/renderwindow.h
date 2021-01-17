@@ -28,6 +28,8 @@ private:
     QOpenGLShaderProgram* shaderProgram;
     QOpenGLVertexArrayObject* vao;
     QOpenGLBuffer* vbo_vertices;
+    QOpenGLBuffer* vbo_vertices2;
+    QOpenGLBuffer* vbo_colors;
 };
 
 #endif // RENDERWINDOW_H
